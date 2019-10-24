@@ -10,39 +10,41 @@ class _HomeState extends State<Home>{
   @override
   Widget build(BuildContext context){
     return Scaffold(
-      body: ListView(
-        children: <Widget>[
-          Container(
-            height: 80.0,
-            width: MediaQuery.of(context).size.width,
-            color: Colors.amberAccent,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-               Button(txt: 'Home',size: 25.0,),
-               SizedBox(
-                  width: 10.0,
-                ),
-                Button(txt: 'Blog',size: 20.0),
-                SizedBox(
-                  width: 10.0,
-                ),
-                Button(txt: 'New Blog',size: 20.0),
-                SizedBox(
-                  width: 10.0,
-                ),
-                Button(txt: 'Login',size: 15.0),
-                SizedBox(
-                  width: 10.0,
-                ),
-                Button(txt: 'Sign Up',size: 15.0),
-                SizedBox(
-                  width: 10.0,
-                ),
-              ],
+      body: SafeArea(
+        child: ListView(
+          children: <Widget>[
+            Container(
+              height: 80.0,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.amberAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: <Widget>[
+                 Button(txt: 'Home',size: 25.0,),
+                 SizedBox(
+                    width: 10.0,
+                  ),
+                  Button(txt: 'Blog',size: 20.0),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Button(txt: 'New Blog',size: 20.0),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Button(txt: 'Login',size: 15.0),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  Button(txt: 'Sign Up',size: 15.0),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
