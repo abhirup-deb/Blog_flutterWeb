@@ -17,6 +17,7 @@ class _HomeState extends State<Home>{
             width: MediaQuery.of(context).size.width,
             color: Colors.amberAccent,
             child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                Container(
                  padding: EdgeInsets.all(8.0),
@@ -42,7 +43,29 @@ class _HomeState extends State<Home>{
                     style: TextStyle(fontSize: 20.0,color: Colors.white,),
                   ),
                 ),
-
+                SizedBox(
+                  width: 10.0,
+                ),
+                Container(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("Sign Up",
+                    style: TextStyle(fontSize: 15.0,color: Colors.white,),
+                    textAlign: TextAlign.right,
+                  ),
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Container(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("Login",
+                    style: TextStyle(fontSize: 15.0,color: Colors.white,),
+                    textAlign: TextAlign.right,
+                  ),
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
               ],
             ),
           ),
