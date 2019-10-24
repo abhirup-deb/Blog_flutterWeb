@@ -20,8 +20,8 @@ class _HomeState extends State<Home>{
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                 Button(txt: 'Home',size: 25.0,),
-                 SizedBox(
+                  Button(txt: 'Home',size: 25.0,),
+                  SizedBox(
                     width: 10.0,
                   ),
                   Button(txt: 'Blog',size: 20.0),
@@ -40,6 +40,20 @@ class _HomeState extends State<Home>{
                   SizedBox(
                     width: 10.0,
                   ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 50.0,
+            ),
+            Container(
+              height: 400.0,
+              width: MediaQuery.of(context).size.width,
+              color: Colors.indigoAccent,
+              padding: EdgeInsets.all(5.0),
+              child: Row(
+                children: <Widget>[
+
                 ],
               ),
             ),
