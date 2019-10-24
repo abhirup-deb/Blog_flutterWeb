@@ -19,50 +19,23 @@ class _HomeState extends State<Home>{
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-               Container(
-                 padding: EdgeInsets.all(8.0),
-                 child: Text("Home",
-                 style: TextStyle(fontSize: 28.0,color: Colors.white,),
-                ),
-                ),
+               Button(txt: 'Home',size: 25.0,),
                SizedBox(
                   width: 10.0,
                 ),
-                Container(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text("Blog",
-                    style: TextStyle(fontSize: 20.0,color: Colors.white,),
-                  ),
-                ),
+                Button(txt: 'Blog',size: 20.0),
                 SizedBox(
                   width: 10.0,
                 ),
-                Container(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text("New Blog",
-                    style: TextStyle(fontSize: 20.0,color: Colors.white,),
-                  ),
-                ),
+                Button(txt: 'New Blog',size: 20.0),
                 SizedBox(
                   width: 10.0,
                 ),
-                Container(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text("Sign Up",
-                    style: TextStyle(fontSize: 15.0,color: Colors.white,),
-                    textAlign: TextAlign.right,
-                  ),
-                ),
+                Button(txt: 'Login',size: 15.0),
                 SizedBox(
                   width: 10.0,
                 ),
-                Container(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text("Login",
-                    style: TextStyle(fontSize: 15.0,color: Colors.white,),
-                    textAlign: TextAlign.right,
-                  ),
-                ),
+                Button(txt: 'Sign Up',size: 15.0),
                 SizedBox(
                   width: 10.0,
                 ),
@@ -72,5 +45,20 @@ class _HomeState extends State<Home>{
         ],
       ),
     );
+  }
+}
+
+class Button extends StatelessWidget {
+  const Button({this.txt,this.size});
+  final String txt;
+  final double size;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8.0),
+      child: Text('$txt',
+      style: TextStyle(fontSize: size,color: Colors.white,),
+     ),
+     );
   }
 }
