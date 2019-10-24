@@ -13,10 +13,38 @@ class _HomeState extends State<Home>{
       body: ListView(
         children: <Widget>[
           Container(
-            margin: EdgeInsets.all(5.0),
             height: 80.0,
             width: MediaQuery.of(context).size.width,
             color: Colors.amberAccent,
+            child: Row(
+              children: <Widget>[
+               Container(
+                 padding: EdgeInsets.all(8.0),
+                 child: Text("Home",
+                 style: TextStyle(fontSize: 28.0,color: Colors.white,),
+                ),
+                ),
+               SizedBox(
+                  width: 10.0,
+                ),
+                Container(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("Blog",
+                    style: TextStyle(fontSize: 20.0,color: Colors.white,),
+                  ),
+                ),
+                SizedBox(
+                  width: 10.0,
+                ),
+                Container(
+                  padding: EdgeInsets.all(8.0),
+                  child: Text("New Blog",
+                    style: TextStyle(fontSize: 20.0,color: Colors.white,),
+                  ),
+                ),
+
+              ],
+            ),
           ),
         ],
       ),
