@@ -44,32 +44,51 @@ class _HomeState extends State<Home>{
               ),
             ),
             SizedBox(
-              height: 50.0,
+              height: 100.0,
             ),
             Container(
               height: 400.0,
               width: MediaQuery.of(context).size.width,
-              color: Colors.indigoAccent,
               padding: EdgeInsets.all(5.0),
               child: Row(
                 children: <Widget>[
-                  Container(
-                    height: 100.0,
-                    width: 100.0,
-                    color: Colors.blueAccent,
-                    child: Column(
-                      children: <Widget>[
-                        Image(image: AssetImage("")),
-                        Text(
-                          "Fruits",
-                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400),
-                        )
-                      ],
-                    ),
-                  )
+                  ImageCard(),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  ImageCard(),
+                  SizedBox(
+                    width: 10.0,
+                  ),
+                  ImageCard(),
                 ],
               ),
             ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class ImageCard extends StatelessWidget {
+  const ImageCard({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        height: 500.0,
+        width: 500.0,
+        child: Column(
+          children: <Widget>[
+            Image(image: AssetImage("images/Fruits.jpg")),
+            Text(
+              "Fruits",
+              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400),
+            )
           ],
         ),
       ),
