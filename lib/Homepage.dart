@@ -53,7 +53,20 @@ class _HomeState extends State<Home>{
               padding: EdgeInsets.all(5.0),
               child: Row(
                 children: <Widget>[
-
+                  Container(
+                    height: 100.0,
+                    width: 100.0,
+                    color: Colors.blueAccent,
+                    child: Column(
+                      children: <Widget>[
+                        Image(image: AssetImage("")),
+                        Text(
+                          "Fruits",
+                          style: TextStyle(color: Colors.white,fontWeight: FontWeight.w400),
+                        )
+                      ],
+                    ),
+                  )
                 ],
               ),
             ),
