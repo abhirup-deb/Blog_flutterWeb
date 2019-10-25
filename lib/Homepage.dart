@@ -52,15 +52,15 @@ class _HomeState extends State<Home>{
               padding: EdgeInsets.all(5.0),
               child: Row(
                 children: <Widget>[
-                  ImageCard(),
+                  ImageCard(img: "Fruits"),
                   SizedBox(
                     width: 10.0,
                   ),
-                  ImageCard(),
+                  ImageCard(img: "Vegetables"),
                   SizedBox(
                     width: 10.0,
                   ),
-                  ImageCard(),
+                  ImageCard(img: "Junkies"),
                 ],
               ),
             ),
@@ -72,21 +72,20 @@ class _HomeState extends State<Home>{
 }
 
 class ImageCard extends StatelessWidget {
-  const ImageCard({
-    Key key,
-  }) : super(key: key);
+  const ImageCard({this.img});
 
+  final String img;
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Flexible(
       child: Container(
         height: 500.0,
         width: 500.0,
         child: Column(
           children: <Widget>[
-            Image(image: AssetImage("images/Fruits.jpg")),
+            Image(image: AssetImage("images/$img.jpg")),
             Text(
-              "Fruits",
+              "$img",
               style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400),
             )
           ],
