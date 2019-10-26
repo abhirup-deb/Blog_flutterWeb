@@ -47,7 +47,7 @@ class _HomeState extends State<Home>{
               height: 100.0,
             ),
             Container(
-              height: 400.0,
+              height: 500.0,
               width: MediaQuery.of(context).size.width,
               padding: EdgeInsets.all(5.0),
               child: Row(
@@ -62,6 +62,24 @@ class _HomeState extends State<Home>{
                   ),
                   ImageCard(img: "Junkies"),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            Center(
+              child: Text("Who doesn't like FOOOOOD?",
+                style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold,fontSize: 29.0),
+              ),
+            ),
+            SizedBox(
+              height: 20.0,
+            ),
+            Center(
+              child: Container(
+                child: Text("Select the Desired Category you want to Know about.",
+                style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold,fontSize: 20.0),
+                ),
               ),
             ),
           ],
@@ -86,7 +104,7 @@ class ImageCard extends StatelessWidget {
             Image(image: AssetImage("images/$img.jpg")),
             Text(
               "$img",
-              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 20.0),
+              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w900,fontSize: 30.0),
             )
           ],
         ),
