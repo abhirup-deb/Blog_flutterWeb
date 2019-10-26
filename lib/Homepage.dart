@@ -86,7 +86,7 @@ class ImageCard extends StatelessWidget {
             Image(image: AssetImage("images/$img.jpg")),
             Text(
               "$img",
-              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400),
+              style: TextStyle(color: Colors.black,fontWeight: FontWeight.w400,fontSize: 20.0),
             )
           ],
         ),
