@@ -76,11 +76,26 @@ class _HomeState extends State<Home>{
               height: 20.0,
             ),
             Center(
+              child: Text("Select the Desired Category you want to Know about.",
+              style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold,fontSize: 20.0),
+              ),
+            ),
+            SizedBox(
+              height: 40.0,
+            ),
+            Center(
               child: Container(
-                child: Text("Select the Desired Category you want to Know about.",
-                style: TextStyle(color: Colors.teal,fontWeight: FontWeight.bold,fontSize: 20.0),
+                decoration: BoxDecoration(borderRadius: BorderRadius.circular(20.0),color: Colors.redAccent,),
+                height: 50.0,
+                width: 100.0,
+                child: Center(
+                  child: Text("Our Team",style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 20.0)
+                    ),
                 ),
               ),
+            ),
+            SizedBox(
+              height: 100.0,
             ),
           ],
         ),
