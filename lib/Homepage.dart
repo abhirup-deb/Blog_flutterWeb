@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
@@ -46,6 +47,14 @@ class _HomeState extends State<Home>{
             SizedBox(
               height: 100.0,
             ),
+            Center(
+              child: Text("Confused About what to Have?",
+                style: TextStyle(color: Colors.teal,fontWeight: FontWeight.w700,fontSize: 50.0),
+              ),
+            ),
+            SizedBox(
+              height: 140.0,
+            ),
             Container(
               height: 500.0,
               width: MediaQuery.of(context).size.width,
@@ -81,7 +90,7 @@ class _HomeState extends State<Home>{
               ),
             ),
             SizedBox(
-              height: 40.0,
+              height: 340.0,
             ),
             Center(
               child: Container(
@@ -95,8 +104,30 @@ class _HomeState extends State<Home>{
               ),
             ),
             SizedBox(
-              height: 100.0,
+              height: 50.0,
             ),
+            Container(
+              color: Colors.deepPurpleAccent,
+              height: 340.0,
+              width: MediaQuery.of(context).size.width,
+              child: Column(
+                children: <Widget>[
+                  SizedBox(
+                    height: 40.0,
+                  ),
+                  Center(child: Image.asset("39253416_2099744673677827_3243831233498578944_n.jpg",height: 170.0,width: 170.0,)),
+                  SizedBox(
+                    height: 30.0,
+                  ),
+                  Text("Abhirup Deb",style: TextStyle(color: Colors.white,fontSize: 30.0,fontWeight: FontWeight.w600),),
+                  Text("Lead Developer",style: TextStyle(color: Colors.white,fontSize: 15.0,fontWeight: FontWeight.w400),),
+                  SizedBox(
+                    height: 40.0,
+                  ),
+
+                ],
+              )
+            )
           ],
         ),
       ),
