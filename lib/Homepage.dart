@@ -1,13 +1,24 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'Allblogs.dart';
+import 'Newblog.dart';
 
 
 class Home extends StatefulWidget{
+  static const String id = 'Home';
   Home({Key key}) : super(key:key);
   _HomeState createState() => _HomeState();
 }
 
+
 class _HomeState extends State<Home>{
+  bool pressed = false;
+
+  @override
+  void initState() {
+    pressed = false;
+    super.initState();
+  }
   @override
   Widget build(BuildContext context){
     return Scaffold(
@@ -25,11 +36,24 @@ class _HomeState extends State<Home>{
                   SizedBox(
                     width: 10.0,
                   ),
-                  Button(txt: 'Blog',size: 20.0),
+                  GestureDetector(
+                    onTap: () {
+                      setState((){
+                        pressed = true;
+                      });
+                      Navigator.pushNamed(context,Allblogs.id);
+                    },
+                    child:  Text('Blog',style: pressed != true? TextStyle(fontSize: 20.0,color: Colors.white):TextStyle(fontSize: 20.0,color: Colors.white,fontWeight: FontWeight.w900),),
+                  ),
                   SizedBox(
                     width: 10.0,
                   ),
-                  Button(txt: 'New Blog',size: 20.0),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context,Newblog.id);
+                    },
+                    child:  Text('New Blog',style: TextStyle(fontSize: 18.0,color: Colors.white),),
+                  ),
                   SizedBox(
                     width: 10.0,
                   ),
